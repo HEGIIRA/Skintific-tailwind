@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Lainnya</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../public/output.css">
+    <!-- ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="../public/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="py-8 lg:pt-6 lg:pb-14">
+        <div class="container mx-auto lg:relative flex flex-col lg:flex-row
+                    lg:justify-between gap-y-4 lg:gap-y-0">
+            <!-- logo -->
+            <div class="flex justify-center lg:justify-normal w-[170px]">
+                <a href="">
+                    <img src="../asset/skintific-logo.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                <!-- daftar -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal hover:text-accent transition-all duration-300">
+                    <button>Daftar</button>
+                </div>
+                <!-- masuk -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal hover:text-accent transition-all duration-300">
+                    <button onclick="window.location.href='log-in.html'">Masuk</button>
+                </div>
+                <!-- shop -->
+                <div class="hidden lg:flex justify-center items-center gap-x-2 lg:justify-normal hover:text-accent transition-all duration-300">
+                    <button class=""><i class="ri-shopping-cart-line"></i></button>
+                </div>
+
+                <!-- button -->
+                <button class="btn btn-sm btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0
+                shadow-2xl lg:hidden transition-all duration-300 z-9">
+                Shop Now <i class="ri-shopping-cart-line"></i>
+                </button>
+                
+                <!-- nav mobile-->
+                <nav class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] lg:hidden">
+                    <div class="mnav__close-btn bg-primary w-8 h-8 relative -right-full
+                    top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg">
+                        <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
+                    </div>
+
+                    <!-- logo, list, form -->
+                    <div class="px-12 flex flex-col gap-y-12 h-full">
+                        <!-- logo -->
+                        <a href="">
+                            <img src="../asset/skintific-logo.png" alt="logo" class="w-[150px]">
+                        </a>
+                        <!-- list -->
+                        <ul class="flex flex-col gap-y-5 ">
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Diskon</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Produk Baru</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Koleksi Spesial</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Bahan</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Maslaah Kulit</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Tentang</a>
+                            </li>
+                        </ul>
+                        <!-- form -->
+                        <form class="relative flex gap-x-[10px]">
+                            <label for="">
+                                <i class="ri-search-line text-2xl text-accent"></i>
+                            </label>   
+                            <input type="text" id="nav-search-input" 
+                            placeholder="search..." class="outline-none w-[160px] border-b-2 focus:border-b-2
+                            focus:border-accent placeholder:italic">                       
+                        </form>
+                    </div>
+                </nav>
+
+                <!-- dekstop nav -->
+                <nav
+                class="bg-white absolute w-full left-0 -bottom-[86px] shadow-custom1
+                        h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]">
+                    <!-- list -->
+                    <ul class="flex gap-x-4">
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Diskon</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Produk Baru</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Koleksi Spesial</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Bahan</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Masalah Kulit</a>
+                        </li>
+                        <li>
+                            <a href="#" class=" text-secondary hover:text-accent
+                             transition-all duration-300">Tentang</a>
+                        </li>
+                    </ul>
+                    <!-- form -->
+                    <form class="relative flex gap-y-[10px]">
+                        <label for="search-input" class="flex justify-center items-center group">
+                            <i class="ri-search-line text-2xl text-accent"></i>
+                        </label>
+                        <input type="text" id="search-input" placeholder="Cari.."
+                        class="outline-none w-[100px] focus:w-[170px] focus:border-b-2 focus:border-accent
+                        placeholder:italic placeholder:text-base transition-all duration-500">
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- DETAIL PAGE -->
+    <section class="detail mt-[5rem] mx-auto">
+        <div class="container flex flex-col xl:flex-row ">
+            <!-- Swiper -->
+            <div class="swiper mySwiper max-w-[15rem] xl:max-w-[25rem] xl:float-left xl:mx-auto xl:my-auto ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../asset/brightening/puple-toner4.jpg"  alt=""></div>
+                    <div class="swiper-slide"><img src="../asset/brightening/purple-toner2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../asset/brightening/purple-toner3.jpg" alt=""></div>
+                </div>
+    
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div> 
+              
+
+            <!-- Keterangan -->
+            <div class="flex-1 flex flex-col text-center ml-3 mt-5 xl:max-w-[30rem] xl:text-left  xl:mt-6">
+                <!-- name -->
+                <h3 class="font-semibold mb-[10px] text-[15px] xl:text-[30px]">5% AHA/BHA Exfoliating Toner</h4>
+                <!-- price -->
+                <div class="flex justify-center mt-2 xl:flex-row xl:justify-start xl:mt-5">
+                    <p class="text-primary font-semibold text-[18px] xl:text-[35px]">
+                        Rp111.400    
+                    </p>
+                    <div>
+                        <span class="font-light ml-1 text-[13px] xl:text-[18px] line-through text-secondary">Rp139.000</span>
+                        <span class="font-semibold text-[10px] xl:text-[13px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">20%</span>
+                    </div>
+                </div>
+                           
+                <!-- desk -->
+                    <ul class="text-primary text-[13px] xl:text-[17px] xl:mt-5 text-left list-disc">
+                        <li>Gabungan 5% AHA BHA PHA yang dapat mengangkat sel kulit mati, minyak berlebih pada kulit secara efektif namun tetap gentle</li>
+                        <li>Membantu kulit menjadi lebih sehat dan cerah karena sifatnya yang bisa mengembalikan fungsi alami kulit</li>
+                        <li>Menjaga kulit agar tetap terhidrasi dan terjauh dari permasalahan kulit</li>
+                        <li>Memperbaiki sel kulit agar lebih sehat dan kenyal</li>
+                    </ul>
+
+                <!-- other -->
+                <div class="flex items-center text-[12px] gap-x-4 mt-5 xl:text-[18px] xl:gap-x-5 text-secondary">
+                    <a href="#" class="hover:text-accent"><i class="ri-map-pin-line"></i> Lokasi toko</a>
+                    <a href="#" class="hover:text-accent"><i class="ri-star-fill"></i> Rating seller</a>
+                    <a href="#" class="hover:text-accent"><i class="ri-truck-line"></i> Pengiriman kurir</a>
+                </div>
+            </div>
+
+            <!-- Spesifikasi -->
+            <div class="">
+                <div>
+                    <!-- judul -->
+                    <h3 class="h5 text-[20px] border-b-2 pb-8 mt-7">Spesifikasi</h3>
+                    <!-- spesifikasi -->
+                    <div class="flex flex-col">
+                        <!-- one -->
+                        <div class="flex flex-row text-[13px] gap-x-[13rem] border-b-2 py-1 xl:py-2 text-center">
+                            <p class=" xl:pl-[20px]">Tipe</p>
+                            <p class="xl:pr-[20px]">Toner</p>
+                        </div>
+                        <!-- two -->
+                        <div class="flex flex-row text-[13px] gap-x-[11.7rem] border-b-2 py-1 xl:py-2 text-center">
+                            <p class="xl:pl-[20px]">Volume</p>
+                            <p class="pr-[20px]">80ml</p>
+                        </div>
+                        <!-- three -->
+                        <div class="flex flex-row text-[13px] gap-x-[11.6rem] border-b-2 py-1 xl:py-2 text-center">
+                            <p class="xl:pl-[20px]">Brand</p>
+                            <p class="pr-[20px]">Skintific</p>
+                        </div>
+                        <!-- four -->
+                        <div class="flex flex-row text-[13px] gap-x-[5.7rem] border-b-2 py-1 xl:py-2 text-center">
+                            <p class="xl:pl-[20px]">Masa Kadaluwarsa</p>
+                            <p class="pr-[20px]">>6 bulan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <!-- swiper -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- main -->
+    <script src="main.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

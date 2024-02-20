@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skintific</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../public/output.css">
+    <!-- ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="../public/swiper-bundle.min.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../asset/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="py-8 lg:pt-6 lg:pb-14">
+        <div class="container mx-auto lg:relative flex flex-col lg:flex-row
+                    lg:justify-between gap-y-4 lg:gap-y-0">
+            <!-- logo -->
+            <div class="flex mx-auto xl:mx-0 lg:justify-normal w-[170px]">
+                <a href="">
+                    <img src="../asset/skintific-logo.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                <!-- daftar -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal hover:text-accent transition-all duration-300">
+                    <button onclick="window.location.href='daftar.html'">Daftar</button>
+                </div>
+                <!-- masuk -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal hover:text-accent transition-all duration-300">
+                    <button onclick="window.location.href='login.html'">Masuk</button>
+                </div>
+                <!-- shop -->
+                <div class="hidden lg:flex justify-center items-center gap-x-2 lg:justify-normal hover:text-accent transition-all duration-300">
+                    <a href="#shop"><i class="ri-shopping-cart-line"></i></a>
+                </div>
+
+                <!-- button -->
+                <button class="btn btn-sm btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0
+                shadow-2xl lg:hidden transition-all duration-300 z-9">
+                Shop Now <i class="ri-shopping-cart-line"></i>
+                </button>
+                
+                <!-- nav mobile-->
+                <nav class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] lg:hidden z-50">
+                    <div class="mnav__close-btn bg-primary w-8 h-8 relative -right-full
+                    top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg">
+                        <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
+                    </div>
+
+                    <!-- logo, list, form -->
+                    <div class="px-12 flex flex-col gap-y-12 h-full">
+                        <!-- logo -->
+                        <a href="">
+                            <img src="../asset/skintific-logo.png" alt="logo" class="w-[150px]">
+                        </a>
+                        <!-- list -->
+                        <ul class="flex flex-col gap-y-5 ">
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Diskon</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Produk Baru</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Koleksi Spesial</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Bahan</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Maslaah Kulit</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-secondary hover:text-accent
+                                 transition-all duration-300">Tentang</a>
+                            </li>
+                        </ul>
+                        <!-- form -->
+                        <form class="relative flex gap-x-[10px]">
+                            <label for="">
+                                <i class="ri-search-line text-2xl text-accent"></i>
+                            </label>   
+                            <input type="text" id="nav-search-input" 
+                            placeholder="search..." class="outline-none w-[160px] border-b-2 focus:border-b-2
+                            focus:border-accent placeholder:italic">                       
+                        </form>
+                    </div>
+                </nav>
+
+                <!-- dekstop nav -->
+                <nav
+                class="bg-white absolute w-full left-0 -bottom-[86px] shadow-custom1
+                        h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]">
+                    <!-- list -->
+                    <ul class="flex gap-x-4">
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Diskon</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Produk Baru</a>
+                        </li>
+                        <li>
+                            <a href="#collection" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Koleksi Spesial</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Bahan</a>
+                        </li>
+                        <li>
+                            <a href="#" class="border-r pr-4 text-secondary hover:text-accent
+                             transition-all duration-300">Masalah Kulit</a>
+                        </li>
+                        <li>
+                            <a href="#" class=" text-secondary hover:text-accent
+                             transition-all duration-300">Tentang</a>
+                        </li>
+                    </ul>
+                    <!-- form -->
+                    <form class="relative flex gap-y-[10px]">
+                        <label for="search-input" class="flex justify-center items-center group">
+                            <i class="ri-search-line text-2xl text-accent"></i>
+                        </label>
+                        <input type="text" id="search-input" placeholder="Cari.."
+                        class="outline-none w-[100px] focus:w-[170px] focus:border-b-2 focus:border-accent
+                        placeholder:italic placeholder:text-base transition-all duration-500">
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero bg-gray-200 xl:bg-home bg-no-repeat bg-cover bg-full py-12 xl:pt-12 xl:pb-0 overflow-hidden xl:min-h-[400px] xl:bg-right">
+        <div class="container mx-auto h-full ">
+                <!-- text -->
+                <div class="hero__text text-center xl:text-left">
+                    <h1 class="h2 my-auto text-primary xl:hidden">
+                        <span class="text-accent">REPAIR YOUR SKIN BARRIER</span>
+                        <br>
+                        EVERYONE'S FAVORITE SKINCARE
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="stats section" id="collection">
+        <div class="container mx-auto">
+            <div class="h2 text-primary text-center mb-[3rem] border-b-2 p-3">COLLECTION</div>
+            <!-- wrapper -->
+            <div class="flex flex-col xl:flex-row gap-y-6 justify-between">
+                <!-- item 1 -->
+                <div class="stats__item flex-1 flex flex-col items-center">
+                    <div>
+                        <img src="../asset/cover/cover-1.jpg" alt="" class="w-[18rem]">
+                    </div>
+                </div>
+                <!-- item 2 -->
+                <div class="stats__item flex-1 flex flex-col items-center">
+                    <div>
+                        <img src="../asset/cover/cover-2.jpg" alt="" class="w-[18rem]">
+                    </div>
+                </div>
+                <!-- item 3 -->
+                <div class="stats__item flex-1 flex flex-col items-center">
+                    <div>
+                        <img src="../asset/cover/cover-3.jpg" alt="" class="w-[18rem]">
+                    </div>
+                </div>
+                <!-- item 4 -->
+                <div class="stats__item flex-1 flex flex-col items-center">
+                    <div>
+                        <img src="../asset/cover/cover-4.jpg" alt="" class="w-[18rem]">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop">
+        <!-- SHOP 1 -->
+        <div class="container mx-auto">
+        <div class="flex flex-col xl:flex-row justify-between">
+            <h2 class="blog__title h4 xl:h3 text-center xl:text-left mb-5 xl:mt-5">Soothing & Hydrating</h2>
+            <button class="rounded-[10px] text-[15px] btn-sm xl:btn-lg btn-accent mb-5">Lihat Produk lainnya..</button>
+        </div>
+
+        <!-- blog post -->
+        <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 items-center
+                    xl:justify-between mb-[50px]">
+            <!-- post 1 -->
+            <div onclick="window.location.href='detail.html'" class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/soothing/toner/blue-toner.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/soothing/toner/blue-toner2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">5X Ceramide Soothing Toner</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp117.800
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp209.000</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">44%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 2 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/soothing/ss/blue-ss.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/soothing/ss/blue-ss2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">5X Ceramide Serum Sunscreen</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp104.400
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp169.000</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">38%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 3 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/soothing/serum/blue-serum.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/soothing/serum/blue-serum2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">5X Ceramide Barrier Serum</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp247.200
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp359.000
+                            </span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">31%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 4 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/soothing/krim/blue-krim.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/soothing/krim/blue-krim2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">5X Ceramide Low PH Cleanser</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp85.000
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp129.000</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">44%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 5 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/soothing/amino/blue-amino.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/soothing/amino/blue-amino2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">Amino Acid Gentle Cleansing Mousse</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp87.400
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp153.242</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">43%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- SHOP 2 -->
+        <div class="container mx-auto">
+        <h2 class="blog__title h3 text-center xl:text-left mb-5">Brightening</h2>
+
+        <!-- blog post -->
+        <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 items-center
+                    xl:justify-between mb-[50px]">
+            <!-- post 1 -->
+            <div onclick="window.location.href='detail-2.html'" class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/brightening/purple-toner1.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/brightening/purple-toner2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">5% AHA/BHA Exfoliating Toner</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp111.400
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp139.000</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">20%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 2 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/brightening/pink-serum1.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/brightening/pink-serum2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">10% Niacinamide Serum</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp109.900
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp129.000</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">15%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 3 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/brightening/pink-moist1.png" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/brightening/pink-moist2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">Niacinamide Brightening Moisturizer</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp 265.512
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp 331.890
+                            </span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">25%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 4 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/brightening/pink-toner1.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/brightening/pink-toner2.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">Glycolic Acid Daily Clarifying Toner</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp110.900
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp169.000</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">34%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!-- post 5 -->
+            <div class="blog__post max-w-[250px] xl:max-w-[15rem] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group hover:scale-105 duration-300">
+                <!-- img -->
+                <div class="relative overflow-hidden">
+                    <img class="transition-all duration-300 w-[20rem] xl:w-[15rem] align-middle" src="../asset/brightening/ha-serum1_11zon.jpg" alt="">
+                    <!-- hover foto -->
+                    <img class="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-[100%]" src="../asset/brightening/ha-serum2_11zon.jpg" alt="">
+                </div>
+                <!-- text -->
+                <div class="px-5 py-6">
+                    <!-- title -->
+                    <h4 class="h5 mb-[20px]">SymWhite377 Dark Spot Serum</h4>
+                    <!-- price -->
+                    <p class="text-primary font-semibold text-[18px]">
+                        Rp121.900
+                        <div>
+                            <span class="font-light text-[15px] line-through text-secondary">Rp154.300</span>
+                            <span class="font-semibold text-[10px] border-none px-1.5 rounded-[3px] bg-tertiary text-accent-tertiary">21%</span>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- QUOTES -->
+    <section class="hero bg-gray-200 p-10 xl:bg-quotes bg-no-repeat bg-cover overflow-hidden xl:min-h-[350px] xl:min-w-[100%] xl:bg-left">
+        <div class="container mx-auto h-full">
+            <!-- text -->
+            <div class="hero__text xl:mt-[7rem] xl:mr-[8rem]">
+                <h1 class="h3 text-primary text-center xl:text-right">
+                    We Repair Your 
+                    <span class="text-accent">Skin Barrier.</span>
+                </h1>
+                </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="px-[50px] py-[70px]">
+        <div class="flex flex-col lg:flex-row justify-between items-center">
+            <div class="mb-12 lg:mb-0">
+                <img class="w-[10rem]" src="../asset/skintific-logo.png" alt="">
+            </div>
+            <div>
+                <p class="text-center xl:">&copy; 2023 Skintific. All Right Reserved. Designed by Hegira Sven</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- SCRIPT -->
+    <!-- swiper -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- main -->
+    <script src="main.js"></script>
+    <!-- scroll reveal -->
+    <script src="scrollreveal.min.js"></script>
+
+</body>
+</html>
